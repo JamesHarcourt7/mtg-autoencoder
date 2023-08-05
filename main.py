@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import section
 import colours
+import canny
 
 if __name__ == '__main__':
     # get all images in directory
@@ -23,3 +24,6 @@ if __name__ == '__main__':
 
             # calculate histogram
             hist = colours.histogram(img_section)
+
+            # detect edges
+            edges = canny.detect_edges(img_section)
